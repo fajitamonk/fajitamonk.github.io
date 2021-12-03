@@ -1,0 +1,131 @@
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: rgb(4, 78, 112);
+}
+
+body {
+    background: linear-gradient(180deg, rgb(0, 0, 0) 1%, rgb(4, 78, 112) 80%);
+    color: rgb(255, 249, 241);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.animation-logo img {
+    text-align: center;
+    margin: 35vh 0;
+    max-width: 250px;
+}
+
+.animation-logo span {
+    opacity: 1;
+}
+
+.animation-logo span {
+    animation: animation 1.3s 3 linear;
+}
+
+@keyframes animation {
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h2 {
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    padding-top: 10vh;
+    font-family: 'Allura', cursive;
+    margin-bottom: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 0 1vh;
+}
+
+.project-card {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 2vh 5vh;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 5%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 100px 1px black;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(40vh);
+}
+
+.project-card:hover {
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 0px 0px 100px 1px black;
+    transition: ease-in 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.green-section {
+    height: 1000px;
+}
+
+@media screen and (max-width: 548px) {
+    body {
+        background: linear-gradient(180deg, rgb(0, 0, 0) -30%, rgb(4, 78, 112) 100%);
+    }
+    .animation-logo img {
+        text-align: center;
+        width: 200px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+    h2 {
+        color: white;
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    .projects {
+        padding: 10vh 6vh;
+        flex-direction: column;
+    }
+    .projects :nth-child(1) {
+        align-self: flex-start;
+    }
+    .projects :nth-child(2) {
+        align-self: flex-end;
+    }
+    .projects :nth-child(3) {
+        align-self: flex-start;
+    }
+    .project-card {
+        font-size: 0.9em;
+        text-align: center;
+        margin: 2vh 0;
+        min-width: 150px;
+        min-height: 150px;
+        box-shadow: 0px 0px 50px 1px black;
+        transform: translateY(50vh);
+    }
+}
